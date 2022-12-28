@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int rowno=scn.nextInt();
+        for(int row=1;row<=rowno;row++)
+        {
+            for(int space=rowno-1;space>=row;space--)
+            {
+                System.out.print("\t");
+            }
+
+            for(int print=1;print<=row;print++)
+            {
+                System.out.print("*\t");
+            }
+            System.out.println();
+        }
+
+    }
+}
