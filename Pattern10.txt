@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Pattern10 {
+	public static void main(String[] args) {
+		
+	
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int row=1, nspaces=n/2,nstars=1;
+	while(row<=n)
+	{
+		for(int space=1;space<=nspaces;space++)
+		{
+			System.out.print("\t");
+		}
+		for(int stars=1;stars<=nstars;stars++)
+		{
+			if(stars==1||stars==nstars) {
+			System.out.print("*\t");}
+			else
+			{
+				System.out.print("\t");
+			}
+		}
+			
+		System.out.println();
+		if(row<=n/2)
+		{
+			nspaces=nspaces-1;
+			nstars=nstars+2;
+		}
+		else
+		{
+			nspaces=nspaces+1;
+			nstars=nstars-2;
+		}
+		
+		
+		
+		
+		
+		row++;
+	}
+
+	
+	}
+}
