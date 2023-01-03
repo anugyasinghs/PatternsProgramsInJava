@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Pattern17 {
+public static void main(String[] args) {
+	Scanner scn=new Scanner(System.in);
+	int rowno=scn.nextInt();
+	int row=1,nspace=rowno/2,nstars=1;
+	while(row<=rowno) {
+		for(int space=1;space<=nspace;space++)
+		{
+			if(row==rowno/2+1)
+			{
+				System.out.print("*\t");
+			}
+			else {
+			System.out.print("\t");
+			}
+		}
+		for(int stars=1;stars<=nstars;stars++)
+		{
+			System.out.print("*\t");
+		}
+		System.out.println();
+		if(row<=rowno/2)
+		{
+			nstars=nstars+1;
+		}
+		else
+		{
+			nstars=nstars-1;
+		}
+		row++;
+	}
+}
+}
